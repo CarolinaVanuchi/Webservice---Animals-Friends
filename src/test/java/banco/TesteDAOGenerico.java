@@ -6,11 +6,10 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import modelo.AdoptionModel;
-import util.ValidarCPF;
+
 
 public class TesteDAOGenerico {
 	AdoptionModel adoptionModel = new AdoptionModel();
-	ValidarCPF validarCPF = new ValidarCPF();
 	DAOGenerico dao = new DAOGenerico();
 	Long auxAdoption;
 	
@@ -39,9 +38,6 @@ public class TesteDAOGenerico {
 		adoptionModel.setBreedAnimal("Husky siberiano");
 		dao.alterar(adoptionModel);
 		Assert.assertEquals("Husky siberiano", adoptionModel.getBreedAnimal());
-		
-		// Verificar CPF validp
-		Assert.assertEquals(true, validarCPF.validacpf("88532410987"));
 		
 	} 
 	
