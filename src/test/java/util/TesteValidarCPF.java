@@ -1,4 +1,4 @@
-package banco;
+package util;
 
 import org.junit.Assert;
 import org.junit.Test;

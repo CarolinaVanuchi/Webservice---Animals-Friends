@@ -81,9 +81,10 @@ public class HelloWebService extends Application {
 			model.setLinkVideo(linkVideo);
 			model.setCityName(cityName);
 			model.setStateName(stateName);
-
+			
+			System.out.println("ENTROU NO SALVAR DOS MAUS TRATOS");
 			dao.inserir(model);
-
+				
 			model = new AdoptionModel();
 		} catch (Exception e) {
 			System.out.println("Erro no metodo salvar de adoção " + e.getMessage());
@@ -135,7 +136,8 @@ public class HelloWebService extends Application {
 			mistreatment.setSpecie(specie);
 			mistreatment.setState(state);
 			mistreatment.setStreet(street);
-
+			
+			System.out.println("ENTROU NO SALVAR DE ADOÇÃO");
 			dao.inserir(mistreatment);
 			mistreatment = new MistreatmentModel();
 		} catch (Exception e) {
